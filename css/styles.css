@@ -178,7 +178,8 @@
     max-width: 33%;
     margin-bottom: 35px;
   }
-  
+
+ 
   .skills-title {
     font-size: 24px;
     margin-bottom: 25px;
@@ -191,6 +192,7 @@
     font-size: 45px;
     margin-right: 10px;
   }
+
   
   /* Mobile */
   @media(max-width: 450px) {
@@ -235,9 +237,11 @@
       margin-bottom: 40px;
       text-align: left;
     }
-  
+
     .skills-box i {
       font-size: 60px;
     }
+
+
   
   }
