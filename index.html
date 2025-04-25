@@ -1,76 +1,126 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felipe M. Ornelas | Engenharia de Dados</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap">
-    <!-- Dev Icon Fonts -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-    <!-- CSS do Projeto -->
-    <link rel="stylesheet" href="css/styles.css">
-    <!-- Icone -->
-    <link rel="shortcut icon" href="icon/icone.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Felipe M. Ornelas | Engenharia de Dados</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="shortcut icon" href="icon/icone.ico" type="image/x-icon">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .transition-default {
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
 </head>
-<body>
-    <main id="container">
-        <aside id="bio-container">
-            <h2>Felipe M Ornelas</h2>
-            <img src="icon/foto.jpeg" alt="Felipe M Ornelas">
-            <p>Engenheiro de Dados em formação com experiência sólida em automação e análise de dados.</p>
-            <p id="welcome-text">Seja bem-vindo ao meu portfólio profissional!</p>
-            <ul id="social-container">
-                <li><a href="https://www.facebook.com/felipe.mariubaornelas" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                <li><a href="https://www.instagram.com/felipe_mariuba/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                <li><a href="https://www.linkedin.com/in/felipemornelas" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-            </ul>
-            <div id="email-container">
-                <ion-icon name="mail-outline"></ion-icon><a href="mailto:fe.mariuba@hotmail.com">fe.mariuba@hotmail.com</a>
-            </div>
-        </aside>
-        <section id="about-container">
-            <h1 id="name">Felipe M Ornelas</h1>
-            <p id="title"><span class="highlight">Em transição para Engenharia de Dados</span></p>
-            <p class="description">Atualmente atuo como Analista de Automação Sênior na Keeggo com foco em Python, SQL e Spark, desenvolvendo soluções automatizadas e análises de dados para otimizar processos.</p>
-            <p class="description">Tenho experiência com projetos para o cliente Santander, capacitação de colegas e estou cursando pós-graduação em Engenharia de Dados e IA.</p>
-            <a href="https://github.com/FelipeMOrnelas" id="btn-projects"><ion-icon name="share-social-outline"></ion-icon> <span>Ver Projetos no GitHub</span></a>
+<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-200 font-sans">
+  <main class="max-w-6xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <!-- Sidebar -->
+    <aside class="bg-gray-800 rounded-2xl shadow-lg p-6 text-center" data-aos="fade-right">
+      <img src="icon/foto.jpeg" alt="Felipe M Ornelas" class="w-32 h-32 mx-auto rounded-full mb-4 ring-4 ring-blue-500">
+      <h2 class="text-2xl font-bold mb-2">Felipe M Ornelas</h2>
+      <p class="text-gray-300">Profissional em transição para Engenharia de Dados, com sólida experiência em automação e análise de dados.</p>
+      <p class="mt-2 font-medium text-blue-400">Bem-vindo ao meu portfólio!</p>
+      <ul class="flex justify-center space-x-4 mt-4 text-2xl text-blue-400">
+        <li><a href="https://www.facebook.com/felipe.mariubaornelas" target="_blank" class="hover:scale-110 transition-default"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="https://www.instagram.com/felipe_mariuba/" target="_blank" class="hover:scale-110 transition-default"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li><a href="https://www.linkedin.com/in/felipemornelas" target="_blank" class="hover:scale-110 transition-default"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+      </ul>
+      <div class="mt-4 text-blue-400">
+        <ion-icon name="mail-outline"></ion-icon>
+        <a href="mailto:fe.mariuba@hotmail.com" class="hover:underline">fe.mariuba@hotmail.com</a>
+      </div>
+    </aside>
 
-            <h2 id="skills-section-title">Habilidades Técnicas</h2>
-            <p class="description">Essas são as principais tecnologias que utilizo e estudo:</p>
-            <div id="skills-container">
-                <div class="skills-box">
-                  <p class="skills-title">Linguagens & Dados</p>
-                  <i class="devicon-python-plain colored" title="Python"></i>
-                  <i class="devicon-java-plain colored" title="Java"></i>
-                  <i class="devicon-mysql-plain colored" title="MySQL"></i>
-                  <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
-                  <i class="devicon-amazonwebservices-plain colored" title="AWS"></i>
-                  <i class="devicon-spark-plain colored" title="Apache Spark"></i>
-                  <i class="devicon-pandas-plain" title="Pandas"></i>
-                </div>
-                <div class="skills-box">
-                  <p class="skills-title">Visualização & Ferramentas</p>
-                  <i class="devicon-github-plain" title="GitHub"></i>
-                  <img src="icon/word.ico" title="Word" height="30" width="30">
-                  <img src="icon/excel.ico" title="Excel" height="30" width="30">
-                  <img src="icon/powerpoint.ico" title="PowerPoint" height="30" width="30">
-                  <img src="icon/outlook .ico" title="Outlook" height="30" width="30">
-                </div>            
-              </div>
+    <!-- Conteúdo Principal -->
+    <section class="lg:col-span-2 bg-gray-800 rounded-2xl shadow-lg p-8" data-aos="fade-up">
+      <h1 class="text-3xl font-bold mb-2 text-white">Felipe M Ornelas</h1>
+      <p class="text-xl text-blue-400 mb-4">Em transição para Engenharia de Dados</p>
 
-              <h2 id="projects-title">Projetos em Destaque</h2>
-              <ul>
-                <li><strong>Pipeline de dados com Spark</strong> – Construção de fluxo ETL simulando ambiente real de engenharia de dados. (em breve)</li>
-                <li><strong>Dashboard de Análise Operacional</strong> – Power BI com dados simulados de operação bancária.</li>
-                <li><strong>Automação de testes com Python</strong> – Scripts utilizados em produção com impacto direto em eficiência.</li>
-              </ul>
-        </section>  
-    </main>
-    <!-- Ion Icons -->
-    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+      <p class="mb-3">Atualmente sou Analista de Automação Sênior na Keeggo, atuando com automações em Python, consultas SQL e apoio a projetos de dados para o cliente Santander.</p>
+      <p class="mb-6">Estou cursando pós-graduação em Engenharia de Dados e IA, e desenvolvendo projetos práticos com Spark, Pandas, Power BI e AWS.</p>
+
+      <a href="https://github.com/FelipeMOrnelas" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-default mb-8">
+        <ion-icon name="share-social-outline"></ion-icon>
+        <span>Ver Projetos no GitHub</span>
+      </a>
+
+      <!-- Objetivo Profissional -->
+      <h2 class="text-2xl font-semibold mb-4 text-white">Objetivo Profissional</h2>
+      <p class="text-gray-300 mb-8">Busco uma oportunidade na área de Engenharia de Dados, onde posso aplicar meu conhecimento em automação, análise de dados e ferramentas como Apache Spark, AWS, e Power BI para ajudar empresas a obterem insights valiosos e melhorarem a tomada de decisão.</p>
+
+      <!-- Projetos Pessoais -->
+      <h2 class="text-2xl font-semibold mb-4 text-white">Projetos Pessoais</h2>
+      <ul class="space-y-3 text-gray-300 mb-8">
+        <li><strong class="text-blue-400">Processamento de Dados com Apache Spark:</strong> Construção de pipelines de dados para análise em grande escala utilizando PySpark.</li>
+        <li><strong class="text-blue-400">Dashboard de Análise de Dados com Power BI:</strong> Dashboard interativo para análise de performance de processos empresariais.</li>
+      </ul>
+
+      <!-- Impacto dos Projetos -->
+      <h2 class="text-2xl font-semibold mb-4 text-white">Impacto dos Meus Projetos</h2>
+      <ul class="space-y-3 text-gray-300 mb-8">
+        <li><strong class="text-blue-400">Automação de Processos com Python:</strong> Reduziu o tempo de processamento de dados em 40% para o cliente Santander.</li>
+        <li><strong class="text-blue-400">Análise de Dados com Pandas:</strong> Forneceu insights para otimização de custos que resultaram em uma redução de 15% no gasto anual com dados.</li>
+      </ul>
+
+      <!-- Formação e Desenvolvimento Contínuo -->
+      <h2 class="text-2xl font-semibold mb-4 text-white">Formação e Desenvolvimento Contínuo</h2>
+      <ul class="list-disc list-inside text-gray-300 mb-8">
+        <li>Pós-graduação em Engenharia de Dados e Inteligência Artificial</li>
+        <li>Curso de Apache Spark – Coursera</li>
+        <li>Certificação em AWS Fundamentals – Udemy</li>
+      </ul>
+
+      <!-- Certificações -->
+      <h2 class="text-2xl font-semibold mb-4 text-white">Certificações</h2>
+      <ul class="list-disc list-inside text-gray-300 mb-8">
+        <li>Lean Six Sigma White Belt – FM2S</li>
+        <li>Lean Six Sigma Yellow Belt – FM2S</li>
+        <li>Power BI Completo – Udemy</li>
+        <li>Fundamentos de Dados – Google</li>
+        <li>Linux Onboarding – DIO</li>
+      </ul>
+
+      <!-- Depoimento -->
+      <h2 class="text-2xl font-semibold mb-4 text-white">Depoimento</h2>
+      <blockquote class="bg-gray-700 p-4 rounded text-gray-200 italic mb-8">
+        "Felipe foi fundamental na capacitação da nossa equipe em automação. Seu domínio técnico e disposição para ensinar foram essenciais para mantermos nossos colaboradores e aumentarmos a produtividade."<br>
+        <span class="text-blue-300">– Ex-colega na Keeggo</span>
+      </blockquote>
+
+      <!-- Contato via WhatsApp -->
+      <h2 class="text-2xl font-semibold mb-4 text-white">Entre em Contato</h2>
+      <a href="https://wa.me/5511996325722" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-default">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+        <span>Chamar no WhatsApp</span>
+      </a>
+
+      <!-- Links para LinkedIn e Currículo -->
+      <h3 class="text-2xl font-semibold mb-4 text-white"></h3>
+      <div class="mb-4">
+        <a href="https://www.linkedin.com/in/felipemornelas" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-default mb-8">
+          <ion-icon name="logo-linkedin"></ion-icon>
+          <span>Ver Perfil no LinkedIn</span>
+        </a>
+      </div>
+      <div class="mb-4">
+        <a href="https://drive.google.com/file/d/14Nzf9dCEgU95Mb3xO_3djSHTuGAcibQC/view?usp=sharing" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-gray-500 text-white rounded-full hover:bg-gray-600 transition-default mb-8">
+          <ion-icon name="document-text-outline"></ion-icon>
+          <span>Baixar Currículo</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
