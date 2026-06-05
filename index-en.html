@@ -18,6 +18,14 @@
     .transition-default {
       transition: all 0.3s ease-in-out;
     }
+    /* Ocultar barra de rolagem do carrossel */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
   </style>
 </head>
 <body class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-200 font-sans">
@@ -99,51 +107,176 @@
         <ion-icon name="school-outline" class="text-red-500"></ion-icon> Academic Background
       </h2>
       <div class="bg-gray-700 p-4 rounded-lg mb-8">
-        <h3 class="text-lg font-bold text-white">Postgraduate in Cloud & AI DevOps</h3>
-        <p class="text-red-400 text-sm">Impacta Digital Faculty (In Progress)</p>
+        <h3 class="text-lg font-bold text-white">Bachelor's Degree in Software Engineering</h3>
+        <p class="text-red-400 text-sm">Estácio University (In progress)</p>
         <p class="text-gray-300 mt-2 text-sm">
-            <strong>Focus:</strong> Container Development (Docker/K8s), Generative AI for DevOps, AIOps & Observability, DevSecOps, and Multi-Cloud Governance.
+            <strong>Focus:</strong> Systems Architecture, Data Integration, Scalable Software Engineering, and Fundamentals of Applied Artificial Intelligence.
         </p>
-      </div>
+        </div>
 
-      <h2 class="text-2xl font-semibold mb-6 text-white flex items-center gap-2">
-        <ion-icon name="ribbon-outline" class="text-red-500"></ion-icon> Certifications
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-        <div class="bg-gray-700 p-3 rounded border border-gray-600">
-            <p class="font-bold text-white">Microsoft Azure AI Fundamentals</p>
-            <p class="text-xs text-gray-400">AI-900 | Microsoft</p>
+      <div id="cert-carousel" class="flex overflow-x-auto space-x-5 mb-8 pb-4 scrollbar-hide snap-x cursor-grab">
+        
+        <div class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 flex flex-col justify-between snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight">Federado Qualidade - Professional</h3>
+                <p class="text-xs text-gray-400 mt-2">F1RST Digital Services</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600">
+                <span class="text-xs text-gray-500">Fev 2024</span>
+            </div>
         </div>
-        <div class="bg-gray-700 p-3 rounded border border-gray-600">
-            <p class="font-bold text-white">Federado Qualidade - Professional</p>
-            <p class="text-xs text-gray-400">F1RST Digital Services (Santander)</p>
+
+        <a href="https://www.dio.me/certificate/2E0C69E4/share" target="_blank" class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 hover:border-red-500 hover:shadow-lg transition-default flex flex-col justify-between group snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight group-hover:text-red-400 transition-colors">Automação com Selenium WebDriver e Java</h3>
+                <p class="text-xs text-gray-400 mt-2">DIO</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600 flex justify-between items-center">
+                <span class="text-xs text-gray-500">Dez 2023</span>
+                <ion-icon name="open-outline" class="text-red-500 text-lg"></ion-icon>
+            </div>
+        </a>
+
+        <a href="https://cursos.alura.com.br/certificate/181d8fef-7372-4068-b7b6-582f5d48b025" target="_blank" class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 hover:border-red-500 hover:shadow-lg transition-default flex flex-col justify-between group snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight group-hover:text-red-400 transition-colors">Python Avançando Na Linguagem</h3>
+                <p class="text-xs text-gray-400 mt-2">Alura</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600 flex justify-between items-center">
+                <span class="text-xs text-gray-500">Dez 2022</span>
+                <ion-icon name="open-outline" class="text-red-500 text-lg"></ion-icon>
+            </div>
+        </a>
+
+        <a href="https://cursos.alura.com.br/certificate/8666b57c-a9f2-4486-a485-2b50e70701a4" target="_blank" class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 hover:border-red-500 hover:shadow-lg transition-default flex flex-col justify-between group snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight group-hover:text-red-400 transition-colors">Linux Onboarding: Usando a CLI</h3>
+                <p class="text-xs text-gray-400 mt-2">Alura</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600 flex justify-between items-center">
+                <span class="text-xs text-gray-500">Nov 2022</span>
+                <ion-icon name="open-outline" class="text-red-500 text-lg"></ion-icon>
+            </div>
+        </a>
+
+        <div class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 flex flex-col justify-between snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight">Excel VBA Básico ao Avançado</h3>
+                <p class="text-xs text-gray-400 mt-2">Udemy</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600">
+                <span class="text-xs text-gray-500">Out 2022</span>
+            </div>
         </div>
-        <div class="bg-gray-700 p-3 rounded border border-gray-600">
-            <p class="font-bold text-white">Linux Onboarding</p>
-            <p class="text-xs text-gray-400">DIO / Alura</p>
+
+        <div class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 flex flex-col justify-between snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight">Dashboards e Automações com o Jira</h3>
+                <p class="text-xs text-gray-400 mt-2">Udemy</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600">
+                <span class="text-xs text-gray-500">Set 2022</span>
+            </div>
         </div>
-        <div class="bg-gray-700 p-3 rounded border border-gray-600">
-            <p class="font-bold text-white">Lean Six Sigma Yellow Belt</p>
-            <p class="text-xs text-gray-400">FM2S</p>
+
+        <div class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 flex flex-col justify-between snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight">Data Storytelling</h3>
+                <p class="text-xs text-gray-400 mt-2">Udemy</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600">
+                <span class="text-xs text-gray-500">Jul 2022</span>
+            </div>
         </div>
+
+        <div class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 flex flex-col justify-between snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight">Power BI Completo</h3>
+                <p class="text-xs text-gray-400 mt-2">Udemy</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600">
+                <span class="text-xs text-gray-500">Jun 2022</span>
+            </div>
+        </div>
+
+        <a href="https://www.hackerrank.com/certificates/89956c1e0aee" target="_blank" class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 hover:border-red-500 hover:shadow-lg transition-default flex flex-col justify-between group snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight group-hover:text-red-400 transition-colors">Python (Basic)</h3>
+                <p class="text-xs text-gray-400 mt-2">HackerRank</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600 flex justify-between items-center">
+                <span class="text-xs text-gray-500">Mai 2022</span>
+                <ion-icon name="open-outline" class="text-red-500 text-lg"></ion-icon>
+            </div>
+        </a>
+
+        <div class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 flex flex-col justify-between snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight">Lean Seis Sigma Yellow Belt</h3>
+                <p class="text-xs text-gray-400 mt-2">FM2S Educação</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600">
+                <span class="text-xs text-gray-500">Fev 2022</span>
+            </div>
+        </div>
+        
+        <div class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 flex flex-col justify-between snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight">Lean Seis Sigma White Belt</h3>
+                <p class="text-xs text-gray-400 mt-2">FM2S Educação</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600">
+                <span class="text-xs text-gray-500">Fev 2022</span>
+            </div>
+        </div>
+
+        <a href="https://www.linkedin.com/redir/redirect/?url=https%3A%2F%2Fsgce.fundacaofat.org.br%2Fsgce%2Femitir%2F24AFDC38&urlhash=o_GT&isSdui=true&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BCQxf67SUTMSFCBn1RFRO3Q%3D%3D" target="_blank" class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 hover:border-red-500 hover:shadow-lg transition-default flex flex-col justify-between group snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight group-hover:text-red-400 transition-colors">Microsoft Azure AI Fundamentals AI-900</h3>
+                <p class="text-xs text-gray-400 mt-2">Microsoft</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600 flex justify-between items-center">
+                <span class="text-xs text-gray-500">Dez 2021</span>
+                <ion-icon name="open-outline" class="text-red-500 text-lg"></ion-icon>
+            </div>
+        </a>
+
+        <div class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 flex flex-col justify-between snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight">Microsoft Excel - Do Básico ao Avançado</h3>
+                <p class="text-xs text-gray-400 mt-2">Udemy</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600">
+                <span class="text-xs text-gray-500">Nov 2021</span>
+            </div>
+        </div>
+
+        <div class="w-72 flex-none bg-gray-700 p-5 rounded-xl border border-gray-600 flex flex-col justify-between snap-center">
+            <div>
+                <h3 class="font-bold text-white leading-tight">Git e GitHub do Básico ao Avançado</h3>
+                <p class="text-xs text-gray-400 mt-2">Udemy</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-gray-600">
+                <span class="text-xs text-gray-500">Set 2021</span>
+            </div>
+        </div>
+
       </div>
 
       <div class="flex flex-wrap gap-4 mt-8">
         <a href="https://github.com/felipemornelas" target="_blank" class="flex-1 inline-flex justify-center items-center gap-2 px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-default border border-gray-500">
           <ion-icon name="logo-github"></ion-icon>
-          <span>View Technical Portfolio</span>
+          <span>Ver Portfolio Técnico</span>
         </a>
         <a href="#" class="flex-1 inline-flex justify-center items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-default shadow-lg shadow-red-900/50">
           <ion-icon name="download-outline"></ion-icon>
-          <span>Download Updated Resume</span>
+          <span>Download CV Atualizado</span>
         </a>
       </div>
 
     </section>
   </main>
 
-  <script>
-    AOS.init();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
